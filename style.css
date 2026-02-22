@@ -76,6 +76,47 @@ body {
     color: var(--primary);
 }
 
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 10px;
+    display: none;
+    min-width: 180px;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-light);
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.dropdown-menu a:hover {
+    background: var(--dark);
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -86,13 +127,29 @@ body {
     text-align: center;
     background: linear-gradient(180deg, var(--dark) 0%, var(--dark-card) 100%);
     padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
     max-width: 550px;
     animation: fadeIn 0.8s ease;
+    will-change: transform;
 }
 
+#particleCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content, .social-links, .hero-buttons {
+    position: relative;
+    z-index: 1;
+}
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -178,6 +235,12 @@ body {
     color: var(--primary);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001s !important;
+        transition-duration: 0.001s !important;
+    }
+}
 .social-links {
     display: flex;
     gap: 12px;
@@ -360,6 +423,100 @@ body {
     background: var(--dark);
 }
 
+.section-subheader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.section-subheader i {
+    color: var(--primary);
+}
+
+/* Other + Experience */
+#other {
+    background: var(--dark);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    padding: 24px;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.experience-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.12);
+}
+
+.experience-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(139, 92, 246, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.experience-icon i {
+    font-size: 1.2rem;
+    color: var(--primary);
+}
+
+.experience-card h4 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+}
+
+.experience-card p {
+    color: var(--gray);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.experience-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--dark);
+    color: var(--gray-light);
+    border: 1px solid var(--dark-border);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.tag i {
+    color: var(--primary);
+}
+
+.tag:hover {
+    border-color: var(--primary);
+    color: var(--white);
+}
+
 .contact-intro {
     text-align: center;
     color: var(--gray);
@@ -447,6 +604,20 @@ footer i {
     }
     
     .mobile-menu-btn {
+        display: block;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 8px 0;
+        border-radius: 8px;
+        border: 1px solid var(--dark-border);
+        margin-top: 6px;
+    }
+    
+    .dropdown.open .dropdown-menu {
         display: block;
     }
     

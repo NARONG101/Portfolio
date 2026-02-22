@@ -20,21 +20,29 @@
             <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
             <li><a href="#skills"><i class="fas fa-cog"></i> Skills</a></li>
             <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle"><i class="fas fa-ellipsis-h"></i> More</a>
+                <div class="dropdown-menu">
+                    <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+                    <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
+                </div>
+            </li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-content">
             <div class="profile-image">
-                <img src="https://via.placeholder.com/150x150/8b5cf6/ffffff?text=N" alt="Narong">
+                <img src="Image/Rong.jpg" alt="Narong" loading="lazy">
             </div>
             <h1>Hello, I'm Narong</h1>
             <p class="hero-title">
                 <i class="fas fa-graduation-cap"></i> IT Engineering Student
                 <span class="separator">|</span>
-                <i class="fas fa-laptop-code"></i> Web Developer
+                <i class="fas fa-laptop-code"></i> Junior Web Developer
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">
@@ -45,14 +53,14 @@
                 </a>
             </div>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                <a href="https://github.com/NARONG101" target="_blank" class="social-link">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+                <a href="https://www.linkedin.com/in/narong-kha-b4a61b280" target="_blank" class="social-link">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://twitter.com/yourusername" target="_blank" class="social-link">
-                    <i class="fab fa-twitter"></i>
+                <a href="https://t.me/narong12" target="_blank" class="social-link">
+                    <i class="fab fa-telegram"></i>
                 </a>
             </div>
         </div>
@@ -64,7 +72,7 @@
             <i class="fas fa-user"></i>
             <h2>About Me</h2>
         </div>
-        <p class="fade-in">I'm an IT Engineering student passionate about building modern web applications. I specialize in Laravel and Vue.js, creating clean and efficient solutions.</p>
+        <p class="fade-in">I am a fourth-year Information Technology Engineering student with a strong passion for software and web development. I am currently seeking my first professional opportunity in the IT field to apply my academic knowledge and gain practical, hands-on experience. I am a quick learner, problem solver, and team player who is eager to contribute to meaningful projects and grow within a professional environment.</p>
     </section>
 
     <!-- Skills Section -->
@@ -74,14 +82,23 @@
             <h2>Skills</h2>
         </div>
         <div class="skills-container fade-in">
-            <span><i class="fab fa-html5"></i> HTML</span>
-            <span><i class="fab fa-css3-alt"></i> CSS</span>
-            <span><i class="fab fa-js"></i> JavaScript</span>
-            <span><i class="fab fa-vuejs"></i> Vue.js</span>
-            <span><i class="fab fa-laravel"></i> Laravel</span>
-            <span><i class="fab fa-python"></i> Python</span>
-            <span><i class="fas fa-database"></i> MySQL</span>
-            <span><i class="fab fa-git-alt"></i> Git</span>
+            <span><i class="fa-solid fa-code"></i> C </span>
+            <span><i class="fa-solid fa-code"></i> Cpp </span>
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-vuejs"></i> Vue.js</span>
+            <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span><i class="fa-brands fa-php"></i> PHP</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-solid fa-database"></i> MySQL</span>
+            <span><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span><i class="fa-brands fa-java"></i> Java (basic) </span>
+            <span><i class="fa-solid fa-code"></i> Dart</span>
+            <span><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+            <span><i class="fa-solid fa-palette"></i> Canva </span> 
+            <span><i class="fa-solid fa-image"></i> Photoshop (basic)</span>
+
         </div>
     </section>
 
@@ -97,11 +114,12 @@
                     <i class="fas fa-boxes"></i>
                 </div>
                 <h3>Stock Management System</h3>
-                <p>Full inventory management with Laravel and MySQL. Real-time tracking, CRUD operations, and automated reports.</p>
+                <p>Full inventory management with Laravel and MySQL. Real-time tracking, CRUD operations, and automated reports.<br>Setup: clone, composer install, create .env, php artisan key:generate, migrate, php artisan serve.</p>
                 <div class="project-tech">
                     <span><i class="fab fa-laravel"></i> Laravel</span>
                     <span><i class="fas fa-database"></i> MySQL</span>
                 </div>
+                <a href="https://github.com/NARONG101/Stock_Inventory_System" target="_blank" class="btn btn-secondary">View Repo</a>
             </div>
             <div class="project-card fade-in">
                 <div class="project-icon">
@@ -112,6 +130,142 @@
                 <div class="project-tech">
                     <span><i class="fab fa-laravel"></i> Laravel</span>
                     <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fa-solid fa-qrcode"></i>
+                </div>
+                <h3>QR Generate by Rong</h3>
+                <p>Simple QR code generator for text/links.<br>Setup: clone and open index.html (or serve locally), enter text and download QR.</p>
+                <div class="project-tech">
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                </div>
+                <a href="https://github.com/NARONG101/QR_Generate_By_Rong" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3>Recipe Finder (Flutter)</h3>
+                <p>Flutter mobile app to browse and search recipes.<br>Setup: clone, run <strong>flutter pub get</strong>, then <strong>flutter run</strong> on a connected device/emulator.</p>
+                <div class="project-tech">
+                    <span><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+                    <span><i class="fa-solid fa-code"></i> Dart</span>
+                </div>
+                <a href="https://github.com/NARONG101/-recipe-app-flutter--ITE-E1---Kha-Narong-" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fa-solid fa-store"></i>
+                </div>
+                <h3>E Top Store (Flutter, Team)</h3>
+                <p>Team project building a Flutter e-store app.<br>Setup: clone, run <strong>flutter pub get</strong>, then <strong>flutter run</strong>.</p>
+                <div class="project-tech">
+                    <span><i class="fa-solid fa-mobile-screen-button"></i> Flutter</span>
+                    <span><i class="fa-solid fa-code"></i> Dart</span>
+                </div>
+                <a href="https://github.com/knr-smey/e_top_store" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <h3>Smart School Management (Working & Testing)</h3>
+                <p>Laravel-based school management platform for attendance, payments, and admin features.<br>Setup: clone, <strong>composer install</strong>, create <strong>.env</strong>, <strong>php artisan key:generate</strong>, <strong>php artisan migrate</strong>, <strong>php artisan serve</strong>.</p>
+                <div class="project-tech">
+                    <span><i class="fab fa-laravel"></i> Laravel</span>
+                    <span><i class="fab fa-vuejs"></i> Vue.js</span>
+                </div>
+                <a href="https://github.com/NARONG101/Smart_School_Management-" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+            <div class="project-card fade-in">
+                <div class="project-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <h3>Remove Background (Working & Testing)</h3>
+                <p>Tool to remove image backgrounds and export clean cutouts.<br>Setup: clone; if Python project, create venv, <strong>pip install -r requirements.txt</strong>, run script; if web-based, open <strong>index.html</strong> or serve locally.</p>
+                <div class="project-tech">
+                    <span><i class="fa-brands fa-python"></i> Python</span>
+                    <span><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                </div>
+                <a href="https://github.com/NARONG101/Remove_Bg" target="_blank" class="btn btn-secondary">View Repo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Section -->
+    <section id="other" class="section">
+        <div class="section-header">
+            <i class="fas fa-layer-group"></i>
+            <h2>Other</h2>
+        </div>
+        <div id="experience" class="experience">
+            <div class="section-subheader">
+                <i class="fas fa-briefcase"></i>
+                <h3>Experience</h3>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card fade-in">
+                    <div class="experience-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <h4>ECO International School</h4>
+                    <p>Computing Teacher. Teaching Computing (Basic IT). IT Support & some maintenance support.</p>
+                    <div class="experience-tags">
+                        <span class="tag"><i class="fa-solid fa-calendar"></i> Aug 2025-  Present</span>
+                    </div>
+                </div>
+                <div class="experience-card fade-in">
+                    <div class="experience-icon">
+                        <i class="fa-solid fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4>CK Takhmao School</h4>
+                    <p>IT Support & Teacher. Support all technology tasks in office. Design posters & student ranking. Teach Math and Physics (Grades 6, 7, 8, and 12).</p>
+                    <div class="experience-tags">
+                        <span class="tag"><i class="fa-solid fa-calendar"></i> 2023 – Present</span>
+                    </div>
+                </div>
+                <div class="experience-card fade-in">
+                    <div class="experience-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h4>Pannasastra International School</h4>
+                    <p>ICT Teacher & IT Technical. Teach Computer course including Microsoft Office. General IT tasks in workplace. Support staff with technology problems.</p>
+                    <div class="experience-tags">
+                        <span class="tag"><i class="fa-solid fa-calendar"></i> Jan 2025 – Aug 2025</span>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="education">
+                <div class="section-subheader">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                </div>
+                <div class="experience-grid">
+                    <div class="experience-card fade-in">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-university"></i>
+                        </div>
+                        <h4>Royal University of Phnom Penh</h4>
+                        <p>Information Technology Engineering</p>
+                        <div class="experience-tags">
+                            <span class="tag"><i class="fa-solid fa-calendar"></i> 2023 – Present</span>
+                        </div>
+                    </div>
+                    <div class="experience-card fade-in">
+                        <div class="experience-icon">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h4>Hun Sen Serey Pheap High School</h4>
+                        <p>Graduated High School</p>
+                        <div class="experience-tags">
+                            <span class="tag"><i class="fa-solid fa-calendar"></i> 2019 – 2022</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,26 +279,24 @@
         </div>
         <p class="contact-intro">Feel free to reach out for collaborations or just to say hello!</p>
         <div class="contact-links fade-in">
-            <a href="mailto:narong@email.com" class="contact-item">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Khanarong11@gmail.com&su=Portfolio%20Contact&body=Hello%20Narong%2C%0A%0A" target="_blank" rel="noopener" class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <span>narong@email.com</span>
+                <span>Khanarong11@gmail.com</span>
             </a>
-            <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+            <a href="https://github.com/NARONG101" target="_blank" class="contact-item">
                 <i class="fab fa-github"></i>
                 <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-item">
+            <a href="https://www.linkedin.com/in/narong-kha-b4a61b280" target="_blank" class="contact-item">
                 <i class="fab fa-linkedin-in"></i>
                 <span>LinkedIn</span>
             </a>
+            <a href="https://t.me/narong12" target="_blank" class="contact-item">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p><i class="fas fa-heart"></i> Built by Narong &copy; 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
